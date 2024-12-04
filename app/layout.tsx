@@ -4,10 +4,6 @@ import "./globals.css";
 import Header from "@/components/component/Header";
 import {
   ClerkProvider,
-  SignInButton,
-  SignedIn,
-  SignedOut,
-  UserButton
 } from '@clerk/nextjs'
 
 const inter = Inter({ subsets: ["latin"] });
@@ -28,12 +24,6 @@ export default function RootLayout({
         <body className={`${inter.className} flex flex-col h-full`}>
           <Header />
           <main className="flex-1">
-          <SignedOut>
-            <SignInButton />
-          </SignedOut>
-          <SignedIn>
-            <UserButton />
-          </SignedIn>
             {children}
           </main>
         </body>
